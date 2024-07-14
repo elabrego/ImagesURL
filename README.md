@@ -26,7 +26,7 @@ Run the Script:
 
     Execute the script from RStudio or R command line to start downloading images:
 
-    source("ImageExtractor.R")
+    source("ImagesURL.R")
 
 # Notes
 
