@@ -1,21 +1,36 @@
-# ImagesURL
-Image Extractor
+# Image Extractor
 
-# Description
+## Description
+**Image Extractor** is an R script that utilizes the rvest and httr libraries to extract and download all images from a specified URL. This script functions similarly to browser extensions in Chrome or Firefox that enable bulk image downloads from websites.
 
-Script using rvest and httr libraries,
-This script will allow you to insert a URL link and through them you can download all the images that exist within the web page at once.
+## Usage Instructions
+1. **Set the URL**:
+   - Insert the URL of the webpage from which you want to extract images:
+   ```R
+   url <- "Insert URL"
 
-In the following line, you will have to insert the URL;
+Define Image Type:
 
-url <- "Insert URL"
+    Choose the types of image extensions to download. By default, the script filters for common image formats like JPG, JPEG, PNG, GIF, and WebP:
 
-In this other line, ypu can select which type of extensions will be download, I have done tests with webp;
+    image_urls <- image_urls[grep("\\.(jpg|jpeg|png|gif|webp)$", image_urls)]
 
-image_urls <- image_urls[grep("\\.(jpg|jpeg|png|gif|webp)$", image_urls)]
+Download Directory:
 
-The script works similar to how some Chrome or Firefox extensions work that allow you to download images from a website.
+    Specify the directory where images will be saved. Create the directory if it doesn't exist:
+
+    download_dir <- "C:/Users/EUCLID/Documents/Imagenes"
+    dir.create(download_dir, showWarnings = FALSE)
+
+Run the Script:
+
+    Execute the script from RStudio or R command line to start downloading images:
+
+    source("ImageExtractor.R")
 
 # Notes
 
-- Not all pages have read permissions with a script, showing 403 error.
+- Some websites may restrict access to scripts, resulting in 403 errors.
+- Ensure proper permissions and compliance with website terms of service when extracting images.
+
+
