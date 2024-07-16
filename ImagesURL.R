@@ -26,7 +26,7 @@ image_urls <- lapply(image_urls, function(url) {
 })
 
 # Directorio donde se guardarán las imágenes
-download_dir <- "C:/Users/EUCLID/Documents/Imagenes"
+download_dir <- "path/to/Imagenes"
 
 # Crear el directorio si no existe
 dir.create(download_dir, showWarnings = FALSE)
