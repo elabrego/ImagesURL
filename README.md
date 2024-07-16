@@ -19,7 +19,7 @@ Download Directory:
 
     Specify the directory where images will be saved. Create the directory if it doesn't exist:
 
-    download_dir <- "C:/Users/EUCLID/Documents/Imagenes"
+    download_dir <- "path/to/Imagenes"
     dir.create(download_dir, showWarnings = FALSE)
 
 Run the Script:
